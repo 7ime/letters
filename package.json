@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,14 @@
   },
   "homepage": "https://github.com/7ime/letters#readme",
   "dependencies": {
-    "gulp": "^4.0.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-hb": "^7.0.1",
     "gulp-inline-css": "^3.3.0",
+    "gulp-notify": "^3.2.0",
     "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
     "run-sequence": "^2.2.1"
   }
 }
