@@ -5,6 +5,9 @@ const hb = require('gulp-hb');
 const rename = require('gulp-rename');
 const through = require('through2');
 const path = require('path');
+const runSequence = require('run-sequence');
+
+const inlineCss = require('gulp-inline-css');
 
 var path_to_dist = "dest/";
 var path_to_templates = "src/html";
@@ -47,9 +50,24 @@ gulp.task('handlebars', (done) => {
     done();
 });
 
-gulp.task('build', gulp.parallel('handlebars'), (done) => {
+gulp.task('inlineCss', (done) => {
+    return gulp.src('src/html/*.html')
+        .pipe(inlineCss())
+        .pipe(gulp.dest('dest/'));
     done();
 });
+
+// gulp.task('build', function(done) {
+//     runSequence(
+//         'handlebars',
+//         // 'inlineCss',
+//         done
+//     );
+// });
+
+gulp.task('build', gulp.series('handlebars', 'inlineCss', function (done) {
+    done();
+}));
 
 gulp.task('watch', () => {
     gulp.watch('src/*.handlebars', gulp.parallel('handlebars'));

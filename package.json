@@ -19,6 +19,8 @@
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-hb": "^7.0.1",
-    "gulp-rename": "^1.4.0"
+    "gulp-inline-css": "^3.3.0",
+    "gulp-rename": "^1.4.0",
+    "run-sequence": "^2.2.1"
   }
 }
