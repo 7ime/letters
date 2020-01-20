@@ -9,14 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/7ime/letters.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/7ime/letters/issues"
-  },
-  "homepage": "https://github.com/7ime/letters#readme",
   "dependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",

@@ -1,0 +1,27 @@
+.btn-wrap-bottom {
+  padding-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 214px;
+  padding: 12px 12px 11px;
+  border-radius: 5px;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-text-size-adjust: none;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: $blue;
+  color: $blue-5;
+}
+
+.btn-fluid {
+  display: block;
+}
